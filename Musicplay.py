@@ -124,14 +124,11 @@ class MainWindow(QMainWindow):
         start_time = start_min * 60 * 1000 + start_sec * 1000
         end_time = end_min * 60 * 1000 + end_sec * 1000
         config = {
-            'key': 'be78ee25ffb43853149ace054b5a4d45',
-            'secret': 'BHiRmpjcoV5kGEPf2jiXchTRzIeJnbADyAxPfF5i',
-            'host': 'http://identify-ap-southeast-1.acrcloud.com/',
+            'key': 'ADD YOUR ARP API KEY HERE',
+            'secret': 'ADD YOUR ARP API SECRET HERE',
+            'host': 'ADD ARD HOST URL',
 
         }
-        # song = AudioSegment.from_mp3('C:/Users/THING007/PycharmProjects/Whatever/dol.mp3')
-        # extract = song[start_time:end_time]
-        # extract.export("r.mp3", format="mp3")
         file = "r.mp3"
         audio = acrcloud.recognizer(config, file)
         self.acr1.setText(str(audio['metadata']['music'][0]['external_metadata']['spotify']['album']['name']))
